@@ -43,7 +43,7 @@ final class Range
             throw new InvalidArgumentException(
                 sprintf(
                     'Expected an integer as $min but instead got: %s',
-                    is_object($min) ? get_class($min) : gettype($min)
+                    gettype($min)
                 )
             );
         }
@@ -52,7 +52,7 @@ final class Range
             throw new InvalidArgumentException(
                 sprintf(
                     'Expected an integer as $max but instead got: %s',
-                    is_object($max) ? get_class($max) : gettype($max)
+                    gettype($max)
                 )
             );
         }
