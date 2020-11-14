@@ -1,83 +1,96 @@
-# Range Regex
+<!-- PROJECT SHIELDS -->
+[![Twitter Follow](https://img.shields.io/twitter/follow/SwitchcatA?style=social)](https://twitter.com/SwitchcatA)
+[![Issues](https://img.shields.io/github/issues/SwitchCat/range-regex.svg?style=flat-square)](https://github.com/SwitchCat/range-regex/issues)
+![GitHub All Releases](https://img.shields.io/github/downloads/SwitchCat/range-regex/total?logo=GitHub)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<img src="https://img.shields.io/static/v1?label=SwitchCat&message=Framework&color=ff7701&style=flat-square" />
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
+<br>
+<p align="center">
+  <h1 align="center">SwitchCat/range-regex</h1>
+</p>
 
-Returns a regex-compatible range from two numbers, min and max. Inspired by [jonschlinkert/to-regex-range](https://github.com/jonschlinkert/to-regex-range).
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-## Why would I need this?
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-That's a good question. You normally would write something like `if ($x > $min && $x < $max) { ... }`, right?
+<!-- GETTING STARTED -->
+## Getting Started
 
-Say you want to build a [glob](https://secure.php.net/manual/en/function.glob.php) like function yourself.
+To get a local copy up and running follow these simple steps.
 
-If your glob would support syntax like `foo/{1..5}.md` and you plan to do the matching using a regex pattern.. Well, this library can convert `1..5` to a regex.
+<!-- PREREQUISITES -->
+### Prerequisites
 
-[Read More](https://github.com/micromatch/to-regex-range#convenience)
+* PHP7.4+
+* ext-mbstring
+* [Composer](https://getcomposer.org/)
 
-## Install
+<!-- INSTALLATION -->
+### Installation
 
-Via Composer
-
-``` bash
-$ composer require hansott/range-regex
+Use composer from the root of your project folder to download the library.
+```sh
+composer require switchcat/range-regex
 ```
 
+<!-- USAGE EXAMPLES -->
 ## Usage
 
-``` php
-use HansOtt\RangeRegex\FactoryDefault;
-use HansOtt\RangeRegex\Range;
+<p>All method return an array containing either the element's data either an array of elements with their data.</p>
 
-$factory = new FactoryDefault();
-$converter = $factory->getConverter();
+* Create the periodic object
+```sh
+use SwitchCat\RangeRegex\FactoryDefault;
+use SwitchCat\RangeRegex\Range;
 
-$range = new Range(1, 3456);
-$regex = sprintf('/^(%s)$/', $converter->toRegex($range));
+$Factory = new FactoryDefault();
+$converter = $Factory->getConverter();
+$Range = new Range(int $min, int $max);
+
+$regex = sprintf('/^(%s)$/', $converter->toRegex($Range));
 // /^([1-9]|[1-9][0-9]|[1-9][0-9]{2}|[1-2][0-9]{3}|3[0-3][0-9]{2}|34[0-4][0-9]|345[0-6])$/
-$matchesRegex = (bool) preg_match($regex, 0); // false
-$matchesRegex = (bool) preg_match($regex, 2014); // true
-$matchesRegex = (bool) preg_match($regex, 3457); // false
 ```
 
-## Change log
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
-
+<!-- CONTRIBUTING -->
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+## Contact
+
+<a href="https://switchcat.agency" ><img src="https://img.shields.io/static/v1?label=SwitchCat&message=Agency&color=ff7701&style=for-the-badge" /></a>
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements 
+
+Based on the work of:
+
+- <a href="https://github.com/hansott/range-regex" >hansott/range-regex</a>
+- <a href="https://github.com/micromatch/to-regex-range" >micromatch/to-regex-range</a>
+- <a href="https://github.com/jonschlinkert/to-regex-range" >jonschlinkert/to-regex-range</a>
 
 ## Credits
 
-- [Hans Ott][link-author]
-- [All Contributors][link-contributors]
-
-## License
-
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-[ico-version]: https://img.shields.io/packagist/v/hansott/range-regex.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/hansott/range-regex/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/hansott/range-regex.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/hansott/range-regex.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/hansott/range-regex.svg?style=flat-square
-
-[link-packagist]: https://packagist.org/packages/hansott/range-regex
-[link-travis]: https://travis-ci.org/hansott/range-regex
-[link-scrutinizer]: https://scrutinizer-ci.com/g/hansott/range-regex/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/hansott/range-regex
-[link-downloads]: https://packagist.org/packages/hansott/range-regex
-[link-author]: https://github.com/hansott
-[link-contributors]: ../../contributors
+- <a href="https://github.com/hansott" >Hans Ott</a>
+- <a href="https://github.com/switchcat" >Felix Eloy</a>
