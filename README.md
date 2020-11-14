@@ -15,7 +15,6 @@
 
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
-  * [Dependencies](#dependencies)
   * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
@@ -83,7 +82,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <a href="https://switchcat.agency" ><img src="https://img.shields.io/static/v1?label=SwitchCat&message=Agency&color=ff7701&style=for-the-badge" /></a>
 
 <!-- ACKNOWLEDGEMENTS -->
-## Based on the work of 
+## Acknowledgements 
 
 - <a href="https://github.com/hansott/range-regex" >hansott/range-regex</a>
 - <a href="https://github.com/micromatch/to-regex-range" >micromatch/to-regex-range</a>
