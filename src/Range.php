@@ -21,7 +21,7 @@ final class Range
         $this->assertTheseAreIntegers($min, $max);
         if($min > $max)
         {
-            throw new \InvalidArgumentException('Parameter 1 has to be smaller or equal to parameter 2');
+            throw new InvalidArgumentException('Parameter 1 has to be smaller or equal to parameter 2');
         }
         $this->min = $min;
         $this->max = $max;
@@ -40,21 +40,11 @@ final class Range
     private function assertTheseAreIntegers($min, $max):void
     {
         if (is_int($min) === false) {
-            throw new InvalidArgumentException(
-                sprintf(
-                    'Expected an integer as $min but instead got: %s',
-                    gettype($min)
-                )
-            );
+            throw new InvalidArgumentException('Expected an integer as first parameter');
         }
 
         if (is_int($max) === false) {
-            throw new InvalidArgumentException(
-                sprintf(
-                    'Expected an integer as $max but instead got: %s',
-                    gettype($max)
-                )
-            );
+            throw new InvalidArgumentException('Expected an integer as last parameter');
         }
     }
 }
