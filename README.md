@@ -1,4 +1,5 @@
 <!-- PROJECT SHIELDS -->
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/73d45acfd5e84452939d50c4d617680f)](https://app.codacy.com/gh/SwitchCat/range-regex?utm_source=github.com&utm_medium=referral&utm_content=SwitchCat/range-regex&utm_campaign=Badge_Grade)
 [![Twitter Follow](https://img.shields.io/twitter/follow/SwitchcatA?style=social)](https://twitter.com/SwitchcatA)
 [![Issues](https://img.shields.io/github/issues/SwitchCat/range-regex.svg?style=flat-square)](https://github.com/SwitchCat/range-regex/issues)
 ![GitHub All Releases](https://img.shields.io/github/downloads/SwitchCat/range-regex/total?logo=GitHub)
