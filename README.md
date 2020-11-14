@@ -84,6 +84,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements 
 
+Based on the work of:
+
 - <a href="https://github.com/hansott/range-regex" >hansott/range-regex</a>
 - <a href="https://github.com/micromatch/to-regex-range" >micromatch/to-regex-range</a>
 - <a href="https://github.com/jonschlinkert/to-regex-range" >jonschlinkert/to-regex-range</a>
@@ -91,3 +93,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Credits
 
 - <a href="https://github.com/hansott" >Hans Ott</a>
+- <a href="https://github.com/switchcat" >Felix Eloy</a>
