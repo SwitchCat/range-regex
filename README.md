@@ -90,7 +90,7 @@ The package was marked "abandoned" and i found it very usefull. I simply decided
 
 Based on the work of:
 
-- <a href="https://github.com/hansott/range-regex" >hansott/range-regex</a>
+- <a href="https://github.com/hansott/range-regex" >hansott/range-regex</a> 
 - <a href="https://github.com/micromatch/to-regex-range" >micromatch/to-regex-range</a>
 - <a href="https://github.com/jonschlinkert/to-regex-range" >jonschlinkert/to-regex-range</a>
 
