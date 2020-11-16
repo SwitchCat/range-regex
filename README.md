@@ -3,6 +3,7 @@
 [![Issues](https://img.shields.io/github/issues/SwitchCat/range-regex.svg?style=flat-square)](https://github.com/SwitchCat/range-regex/issues)
 ![GitHub All Releases](https://img.shields.io/github/downloads/SwitchCat/range-regex/total?logo=GitHub)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/73d45acfd5e84452939d50c4d617680f)](https://app.codacy.com/gh/SwitchCat/range-regex?utm_source=github.com&utm_medium=referral&utm_content=SwitchCat/range-regex&utm_campaign=Badge_Grade)
 <img src="https://img.shields.io/static/v1?label=SwitchCat&message=Framework&color=ff7701&style=flat-square" />
 
 <br>
@@ -83,6 +84,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements 
+
+No major change has been brought to the original package. Basically ported it to php7.4 (fixed compatibility issues) and added a test suite. 
+The package was marked "abandoned" and i found it very usefull. I simply decided to give it a second life.
 
 Based on the work of:
 
