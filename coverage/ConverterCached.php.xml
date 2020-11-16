@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="ConverterCached.php" path="/">
+    <totals>
+      <lines total="34" comments="0" code="34" executable="9" executed="8" percent="88.89"/>
+      <methods count="3" tested="2" percent="66.67"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="1" tested="0" percent="0.00"/>
+      <traits count="0" tested="0" percent="0"/>
+    </totals>
+    <class name="SwitchCat\RangeRegex\ConverterCached" start="5" executable="9" executed="8" crap="4.02">
+      <namespace name="SwitchCat\RangeRegex"/>
+      <method name="__construct" signature="__construct(SwitchCat\RangeRegex\Converter $converter)" start="11" end="14" crap="1" executable="2" executed="2" coverage="100"/>
+      <method name="getKey" signature="getKey(SwitchCat\RangeRegex\Range $range): string" start="16" end="19" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="toRegex" signature="toRegex(SwitchCat\RangeRegex\Range $range): string" start="21" end="33" crap="2.02" executable="6" executed="5" coverage="83.333333333333"/>
+    </class>
+    <coverage>
+      <line nr="13">
+        <covered by="SwitchCat\RangeRegex\Tests\FactoryDefaultTest::testGetConverterReturnsConverterCached"/>
+        <covered by="SwitchCat\RangeRegex\Tests\ConverterCachedTest::testGetKeyReturnsString"/>
+        <covered by="SwitchCat\RangeRegex\Tests\ConverterCachedTest::testToRegexReturnsString"/>
+        <covered by="SwitchCat\RangeRegex\Tests\ConverterCachedTest::testToRegexRequiresParam"/>
+      </line>
+      <line nr="14">
+        <covered by="SwitchCat\RangeRegex\Tests\FactoryDefaultTest::testGetConverterReturnsConverterCached"/>
+        <covered by="SwitchCat\RangeRegex\Tests\ConverterCachedTest::testGetKeyReturnsString"/>
+        <covered by="SwitchCat\RangeRegex\Tests\ConverterCachedTest::testToRegexReturnsString"/>
+        <covered by="SwitchCat\RangeRegex\Tests\ConverterCachedTest::testToRegexRequiresParam"/>
+      </line>
+      <line nr="18">
+        <covered by="SwitchCat\RangeRegex\Tests\ConverterCachedTest::testGetKeyReturnsString"/>
+        <covered by="SwitchCat\RangeRegex\Tests\ConverterCachedTest::testToRegexReturnsString"/>
+      </line>
+      <line nr="23">
+        <covered by="SwitchCat\RangeRegex\Tests\ConverterCachedTest::testToRegexReturnsString"/>
+      </line>
+      <line nr="25">
+        <covered by="SwitchCat\RangeRegex\Tests\ConverterCachedTest::testToRegexReturnsString"/>
+      </line>
+      <line nr="29">
+        <covered by="SwitchCat\RangeRegex\Tests\ConverterCachedTest::testToRegexReturnsString"/>
+      </line>
+      <line nr="30">
+        <covered by="SwitchCat\RangeRegex\Tests\ConverterCachedTest::testToRegexReturnsString"/>
+      </line>
+      <line nr="32">
+        <covered by="SwitchCat\RangeRegex\Tests\ConverterCachedTest::testToRegexReturnsString"/>
+      </line>
+    </coverage>
+    <source>
+      <line no="1">
+        <token name="T_OPEN_TAG">&lt;?php</token>
+      </line>
+      <line no="2"/>
+      <line no="3">
+        <token name="T_NAMESPACE">namespace</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">SwitchCat</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">RangeRegex</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="4"/>
+      <line no="5">
+        <token name="T_FINAL">final</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CLASS">class</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">ConverterCached</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_IMPLEMENTS">implements</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Converter</token>
+      </line>
+      <line no="6">
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="7">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Converter</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$converter</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="8"/>
+      <line no="9">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_ARRAY">array</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$cache</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="10"/>
+      <line no="11">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">__construct</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Converter</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$converter</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="12">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="13">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">converter</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$converter</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="14">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="15"/>
+      <line no="16">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getKey</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Range</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$range</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_STRING">string</token>
+      </line>
+      <line no="17">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="18">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">sprintf</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'%d:%d'</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$range</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">getMin</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$range</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">getMax</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="19">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="20"/>
+      <line no="21">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">toRegex</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Range</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$range</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_STRING">string</token>
+      </line>
+      <line no="22">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="23">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$key</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">getKey</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$range</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="24"/>
+      <line no="25">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_ISSET">isset</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">cache</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_VARIABLE">$key</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="26">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">cache</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_VARIABLE">$key</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="27">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="28"/>
+      <line no="29">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$regex</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">converter</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">toRegex</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$range</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="30">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">cache</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_VARIABLE">$key</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$regex</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="31"/>
+      <line no="32">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$regex</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="33">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="34">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="35"/>
+    </source>
+  </file>
+</phpunit>

@@ -12,28 +12,23 @@ final class ConverterDefault implements Converter
         if ($min === $max) {
             return $min;
         }
-
+        /*
         if ($min > $max) {
             return sprintf('%d|%d', $min, $max);
-        }
-
+        }        
+*/
         $positives = [];
         $negatives = [];
 
         if ($min < 0) {
             $newMin = 1;
-            if ($max < 0) {
-                $newMin = abs($max);
-            }
-
+            $newMin = ($max < 0) ? abs($max) : $newMin;
             $newMax = abs($min);
             $negatives = $this->splitToPatterns($newMin, $newMax);
             $min = 0;
         }
 
-        if ($max >= 0) {
-            $positives = $this->splitToPatterns($min, $max);
-        }
+        $positives = ($max >= 0) ? $this->splitToPatterns($min, $max) : $positives;
 
         return $this->siftPatterns($negatives, $positives);
     }
@@ -129,23 +124,15 @@ final class ConverterDefault implements Converter
             $digits++;
         }
 
-        if ($digits > 0) {
-            $pattern .= '[0-9]';
-        }
-
-        if ($digits > 1) {
-            $pattern .= sprintf('{%d}', $digits);
-        }
+        $pattern .= ($digits > 0) ? '[0-9]' : '';
+        $pattern .= ($digits > 1) ? sprintf('{%d}', $digits) : '';
 
         return $pattern;
     }
 
     private function countNines(int $num, int $nines):int
     {
-        $num = (string)$num;
-        $offset = (-1) * $nines;
-
-        return (int)(mb_substr($num, 0, $offset) . str_repeat('9', $nines));
+        return (int)(mb_substr((string)$num, 0, ((-1) * $nines)) . str_repeat('9', $nines));
     }
 
     private function countZeros(int $integer, int $zeros):int
@@ -155,11 +142,8 @@ final class ConverterDefault implements Converter
 
     private function zip(int $start, int $stop):array
     {
-        $start = (string) $start;
-        $stop = (string) $stop;
-
-        $start = str_split($start);
-        $stop = str_split($stop);
+        $start = str_split((string) $start);
+        $stop = str_split((string) $stop);
 
         $zipped = [];
         foreach ($start as $index => $char) {

@@ -4,6 +4,7 @@
     "description": "Returns a regex-compatible range from two numbers, min and max.",
     "keywords": [
         "hansott",
+        "switchcat"
         "numeric",
         "regex",
         "range",

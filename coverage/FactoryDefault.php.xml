@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="FactoryDefault.php" path="/">
+    <totals>
+      <lines total="13" comments="0" code="13" executable="2" executed="2" percent="100.00"/>
+      <methods count="1" tested="1" percent="100.00"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="1" tested="1" percent="100.00"/>
+      <traits count="0" tested="0" percent="0"/>
+    </totals>
+    <class name="SwitchCat\RangeRegex\FactoryDefault" start="5" executable="2" executed="2" crap="1">
+      <namespace name="SwitchCat\RangeRegex"/>
+      <method name="getConverter" signature="getConverter(): SwitchCat\RangeRegex\ConverterCached" start="7" end="12" crap="1" executable="2" executed="2" coverage="100"/>
+    </class>
+    <coverage>
+      <line nr="9">
+        <covered by="SwitchCat\RangeRegex\Tests\FactoryDefaultTest::testGetConverterReturnsConverterCached"/>
+      </line>
+      <line nr="11">
+        <covered by="SwitchCat\RangeRegex\Tests\FactoryDefaultTest::testGetConverterReturnsConverterCached"/>
+      </line>
+    </coverage>
+    <source>
+      <line no="1">
+        <token name="T_OPEN_TAG">&lt;?php</token>
+      </line>
+      <line no="2"/>
+      <line no="3">
+        <token name="T_NAMESPACE">namespace</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">SwitchCat</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">RangeRegex</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="4"/>
+      <line no="5">
+        <token name="T_FINAL">final</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CLASS">class</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">FactoryDefault</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_IMPLEMENTS">implements</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Factory</token>
+      </line>
+      <line no="6">
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="7">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getConverter</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_STRING">ConverterCached</token>
+      </line>
+      <line no="8">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="9">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$converter</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NEW">new</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">ConverterDefault</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="10"/>
+      <line no="11">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NEW">new</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">ConverterCached</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$converter</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="12">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="13">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="14"/>
+    </source>
+  </file>
+</phpunit>
