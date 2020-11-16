@@ -85,7 +85,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements 
 
-No major change has been brought to the original package. Basically ported it to php7.4 (fixed compatibility issues) and added a test suite. 
+No major change has been brought to the original package. Basically ported it to php7.4 (fixed compatibility issues) and added a test suite. Some code optimization has been done in order to comply with code inspection standards. 
 The package was marked "abandoned" and i found it very usefull. I simply decided to give it a second life.
 
 Based on the work of:
